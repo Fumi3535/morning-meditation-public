@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#e8efe6"><meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self' data:; media-src 'self' blob:">
+  <title>朝の余白 — 3分間の瞑想</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+ <main>
+  <header><span class="brand">朝の余白</span><span class="tag">3分間の試聴版</span></header>
+  <section class="intro"><p class="eyebrow">A LITTLE SPACE FOR YOUR MORNING</p><h1>わたしに戻る、<br>やさしい3分。</h1><p>何かを変えようとしなくて大丈夫。<br>いまのあなたに、そっと気づく時間です。</p></section>
+  <section class="player" aria-label="瞑想プレーヤー">
+   <div class="orb" aria-hidden="true"><span>ひと息、ゆっくり</span></div>
+   <p id="status" role="status">声を選んで、まずは試聴してみましょう。</p>
+   <p id="caption">目を閉じなくても、そのままで。</p>
+   <div class="timeline"><progress id="progress" max="180" value="0" aria-label="瞑想の進み具合"></progress><span id="time">0:00 / 3:00</span></div>
+   <div class="buttons"><button id="play" class="primary">▶ 瞑想をはじめる</button><button id="pause" disabled>一時停止</button><button id="stop" disabled>終了</button></div>
+  </section>
+  <section class="settings"><h2>心地よい音に整える</h2><label for="voice">日本語の声</label><select id="voice"><option>声を確認しています…</option></select><p class="hint" id="voice-note">声の種類や名前は端末によって異なります。女性の声かどうかは試聴でお確かめください。</p><button id="sample">選んだ声を試聴する</button>
+   <div class="sliders"><label>声の音量 <output id="voiceVolume-value">100%</output><input id="voiceVolume" type="range" min="0" max="1" step="0.05" value="1"></label><label>BGMの音量 <output id="musicVolume-value">30%</output><input id="musicVolume" type="range" min="0" max="1" step="0.05" value="0.3"></label><label>話す速さ <output id="rate-value">0.80</output><input id="rate" type="range" min="0.5" max="1.2" step="0.05" value="0.8"></label><label>声の高さ <output id="pitch-value">1.05</output><input id="pitch" type="range" min="0.7" max="1.4" step="0.05" value="1.05"></label></div>
+   <p class="hint">速さ・高さ・声の音量の変更は、次の言葉から反映されます。音量はiPhone本体でも調整できます。</p>
+  </section>
+  <details><summary>iPhoneで音を確かめるには</summary><ol><li>Safariでこのページを開き、本体の音量を少し上げます。</li><li>日本語の声を選び、「選んだ声を試聴する」を押します。声とBGMが一緒に聞こえるか確認します。</li><li>「瞑想をはじめる」を押して、3分間お試しください。ガイドの合間はBGMだけが流れます。</li><li>途中で「一時停止」、続いて「再開」を押し、声とBGMが戻るか確認します。</li></ol><p>試聴中はSafariを前面に置き、画面をロックしないでください。画面を離れた場合は自動で一時停止します。再開時は、そのガイドを最初から読み直します。</p><p>声がない場合：iPhoneの「設定」→「アクセシビリティ」→「読み上げコンテンツ」（OSによっては「リーダーと読み上げ」）→「声」で日本語の声を確認し、Safariを開き直してください。</p></details>
+  <details><summary>無料の音声方式について</summary><p>試聴版はWeb Speech API（端末の読み上げ機能）を利用します。利用料・APIキー・アカウントは不要ですが、女性音声の数、自然さ、沈黙からの再生の安定性は端末次第です。</p><p>声が好みに合わない場合は、VOICEVOXなどの無料音声合成で録音した音源を使う方法があります。声の品質が一定になり、声とBGMをまとめた音源にもできます。ただし声ごとの利用規約確認・表記と音源作成が必要です。この版には録音音源を含めていません。</p><p>BGMはこのアプリが端末内で合成するオリジナル音です。外部の音楽素材は使いません。アプリから個人情報の送信や記録は行いません。端末の音声処理がオンラインかどうかはOS・声の設定によるため、完全なオフライン処理は保証できません。</p></details>
+  <footer>今日も、自分にやさしく。<br><small>28日間プログラムは、声のご承認後に。</small></footer>
+ </main>
+</body></html>
